@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        button{
+            width:200px;
+            background-color: #E13247;
+            color:white;
+            border-radius: 5px;
+            border-color: #E13247;
+        }
+    </style>
+</head>
+<body style="padding:20px">
+        <form style="background-color:#F7F7F7;width:fit-content;padding:20px;">
+            <label for="n1" class="control-label">Name</label>
+                <input id="n1" type="text" class="form-control" name="name"  style="width:200px;border:1px #E5E8EB solid">
+            <div class="invalid-feedback" style="display: none;">Name is required</div><br>
+
+            <label for="e1" class="control-label">Email</label>
+                <input id="e1" type="email" class="form-control" name="email"  style="width:200px;border:1px #E5E8EB solid">
+            <div class="invalid-feedback" style="display: none;">Email is required</div><br>
+
+            <label for="p1" class="control-label">Password</label>
+                <input id="p1" type="password" class="form-control" name="password"  style="width:200px;border:1px #E5E8EB solid">
+            <div class="invalid-feedback" style="display: none;">Password is required</div><br>
+
+        <label for="h1" class="control-label">Hobbies</label><br>
+            <select id="h1" style="width:200px;background-color:white;border-radius: 5px;border:1px #E5E8EB solid;height:30px;">
+                <option></option>
+                <option>Games</option>
+                <option>Books</option>
+            </select><br><br>
+
+            <button onclick="check()">Submit</button>
+        </form>
+    
+        <script>
+            function check(){
+                var invalid_response=document.getElementsByClassName("invalid-feedback")
+                var form_control=document.getElementsByClassName("form-control")
+                for(let i=0;i<invalid_response.length;i++){
+                    if (invalid_response[i].style.display == 'none') {
+                        event.preventDefault()
+                        invalid_response[i].style.display = 'block';
+                        invalid_response[i].style.color='red';
+                        form_control[i].style.borderColor="red";
+                       
+
+                    }else {
+                        event.preventDefault()
+                        invalid_response[i].style.display = 'none';
+                    }
+                }
+            }
+
+        </script>
+</body>
+</html>
