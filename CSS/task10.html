@@ -6,53 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        button{
-            display:block;
-            padding:5px;
-            margin:5px;
-            border-right: 10px solid black;
-            background-color: white;
-        }
-        #nav{
-            
-            margin-left: 10px;
-            margin-right: 0px;
-            margin-top:6px;
-            display: block;
-            width:100px;
-            float:left;
-            
-        }
-        #d1{
-            background-color: #D6E446;
-            width:30%;
-            margin:auto;
-            height: 400px;
-            
-        }
-       
+       #p1{
+        background-color: yellow;
+        width: fit-content;
+      
+       }
+       .inner_div{
+        border:2px solid black;
+        padding:30px;
+        width:290px;
+     
+       }
+       .outer_div{
+        padding: 10px;
+        border:2px solid #EBEBEB;
+        width:fit-content
+        
+       }
+
     </style>
 </head>
 <body>
-    <div id="d1">
-        
-           <div id="nav">
-                <button style="color:purple">Home page</button>
-                <button style="width:88px; color:blue;">Musings</button>
-                <button style="width:88px; color:blue;">My town</button>
-                <button style="width:88px; color:blue;">Links</button>
-           </div>
-        <div style="color:purple;margin-left: 120px;">
-            <header>
-                <h2>My First styled page</h2>
-            </header>
-            <main style="border-bottom:1px solid #BBBC3D;">
-                <p>Welcome to my styled page!<br><br>It lacks images,but atleast it has styles.
-                    And it<br>has links,even if they dont go anywhere...<br><br>
-                    There should be more here,but i dont know<br>what yet.
-                </p>
-            </main>
-            <p><em>Made 5 April 2004<br>by myself.</em></p>
+    <div class="outer_div">
+        <div class="inner_div">
+            <p id="p1">The outer div has padding applied.This<br> 
+                results in padding between the edge of<br> 
+                the outer div and the edge of the inner div.
+            </p>
         </div>
     </div>
 </body>
